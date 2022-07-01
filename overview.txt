@@ -1,0 +1,9 @@
+For getting trading days:
+https://stackoverflow.com/questions/63220901/python-pandas-market-calendars-day-count-trading-day-vs-calendar-days
+
+For running on a schedule:
+https://stackoverflow.com/questions/15088037/python-script-to-do-something-at-the-same-time-every-day
+https://quant.stackexchange.com/questions/43987/getting-a-list-of-all-trading-days
+
+# finnhub
+https://finnhub.io/docs/api/quote
