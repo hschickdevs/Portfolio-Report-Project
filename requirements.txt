@@ -1,2 +1,5 @@
 requests
 finnhub-python
+pandas
+openpyxl
+ratelimit

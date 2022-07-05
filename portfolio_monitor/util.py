@@ -1,10 +1,12 @@
 from os import getenv
+from dotenv import find_dotenv, load_dotenv
 
 MANDATORY_VARS = ['FINNHUB_APIKEY']
-def handle_env():
+def handle_env(envpath: str = None):
     """Checks if the .env file exists in the current working dir, and imports the variables if so"""
     try:
-        envpath = find_dotenv(raise_error_if_not_found=True, usecwd=True)
+        if envpath is None:
+            envpath = find_dotenv(raise_error_if_not_found=True, usecwd=True)
         load_dotenv(dotenv_path=envpath)
     except:
         pass
