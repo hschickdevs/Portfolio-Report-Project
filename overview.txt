@@ -7,3 +7,6 @@ https://quant.stackexchange.com/questions/43987/getting-a-list-of-all-trading-da
 
 # finnhub
 https://finnhub.io/docs/api/quote
+
+https://github.com/Finnhub-Stock-API/finnhub-python
+https://finnhub.io/pricing

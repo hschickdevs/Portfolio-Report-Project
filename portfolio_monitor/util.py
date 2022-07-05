@@ -1,9 +1,6 @@
-import requests
+from os import getenv
 
-
-def get_stock_price(symbol: str) -> float:
-    pass
-
+MANDATORY_VARS = ['FINNHUB_APIKEY']
 def handle_env():
     """Checks if the .env file exists in the current working dir, and imports the variables if so"""
     try:
@@ -12,8 +9,6 @@ def handle_env():
     except:
         pass
     finally:
-        mandatory_vars = ['FINNHUB_APIKEY']
-        for var in mandatory_vars:
-            val = getenv(var)
-            if val is None:
+        for var in MANDATORY_VARS:
+            if getenv(var) is None:
                 raise ValueError(f"Missing environment variable: {var}")
