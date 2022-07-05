@@ -20,17 +20,18 @@ The task is run on a scheduler that fetches all NYSE trading day closing times a
 The thread sleeps until a trading close date is satisfied, when the report is built and sent.
 ___
 ### Local Setup:
-1. Configure your local configuration in [_config.py](portfolio_report/_config.py):
+1. Install package requirements: `pip install -r requirements.txt`
+2. Configure your local configuration in [_config.py](portfolio_report/_config.py):
    1. Set your SMTP configuration
    2. Specify your finnhub rate limit (default is free subscription)
-2. Set required environment variables (.env file supported in root dir):
+3. Set required environment variables (.env file supported in root dir):
    ```bash
    FINNHUB_APIKEY=your_finnhub_apikey
    FROM_EMAIL=your_sender_email
    FROM_EMAIL_PASSWORD=your_sender_email_password
    ```
-3. Modify the "INPUT_FILEPATH" and "RECIPIENT_EMAILS" variables in [main.py](main.py)
-4. Run the script with `python main.py` from the root directory
+4. Modify the "INPUT_FILEPATH" and "RECIPIENT_EMAILS" variables in [main.py](main.py)
+5. Run the script with `python main.py` from the root directory
 ___
 ### Email Report Demo:
 ![report_email_demo](img/demo.png)
