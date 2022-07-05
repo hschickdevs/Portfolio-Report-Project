@@ -10,9 +10,9 @@ This report adds the following datapoints for each stock using the [Finnhub API]
 - **Position Value**
 - **Day Open**
 - **Day Close**
-- **Day Change (%)**
+- **Day Change (% expressed as a decimal)**
 - **Highest Weighted Analyst Trend (buy, strong buy, hold, etc.)**
-- **Social Sentiment (Twitter Only)**
+- **Social Sentiment (Twitter Only -1 to 1, -1 being very negative and 1 being very positive)**
 
 Upon initial startup of the bot, it to loads up an excel workbook containing three columns, "Symbol", "Entry Price", and "Shares".
 
