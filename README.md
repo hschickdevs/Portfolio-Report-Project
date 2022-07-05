@@ -32,5 +32,8 @@ ___
 3. Modify the "INPUT_FILEPATH" and "RECIPIENT_EMAILS" variables in [main.py](main.py)
 4. Run the script with `python main.py` from the root directory
 ___
+### Email Report Demo:
+![report_email_demo](img/demo.png)
+
 ### Roadmap:
 - Integrate other datasources besides local workbook (TDAmeritrade API)
