@@ -3,7 +3,7 @@
 ## Daily Stock Portfolio Report
 ___
 
-This Python software sends a report to the specified email regarding the performance of the stocks in the [theoretical portfolio(s)](data/portfolios_input.xlsx) at the end of every trading day.
+This Python software sends a report to the specified email regarding the performance of the stocks in the [theoretical portfolio(s)](data/portfolios_input.xlsx) at the end of every NYSE trading day.
 
 This report adds the following datapoints for each stock using the [Finnhub API](https://finnhub.io/):
 - **Position PnL**
