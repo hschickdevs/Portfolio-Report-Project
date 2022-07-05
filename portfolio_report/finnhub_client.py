@@ -1,6 +1,8 @@
 from datetime import datetime
 from statistics import mean, StatisticsError
 
+from ._config import RATE_LIMIT
+
 from ratelimit import limits, sleep_and_retry
 import finnhub 
 
@@ -11,7 +13,7 @@ class FinnhubClient(finnhub.Client):
         self.api_key = api_key
         
     @sleep_and_retry
-    @limits(calls=60, period=60)
+    @limits(calls=RATE_LIMIT[0], period=RATE_LIMIT[1])
     def call_api(self, func, *args):
         """Class method created to limit all API calls to the required period"""
         return func(args)

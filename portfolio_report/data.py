@@ -1,9 +1,11 @@
 from os.path import splitext
 
+from ._config import MANDATORY_SHEET_COLUMNS
+
 import pandas as pd
 
 
-def load_portfolio(path: str) -> list[tuple[str, pd.DataFrame]]:
+def load_portfolio(path: str) -> list[list[str, pd.DataFrame]]:
     """
     Attempts to load the portfolio input and checks that all required parameters are satisfied.
 
@@ -16,12 +18,11 @@ def load_portfolio(path: str) -> list[tuple[str, pd.DataFrame]]:
     else:
         xls = pd.ExcelFile(path)
         for sheet in xls.sheet_names:
-            output.append((sheet, pd.read_excel(path, sheet_name=sheet)))
+            output.append([sheet, pd.read_excel(path, sheet_name=sheet)])
 
     # Assert mandatory columns are set
-    MANDATORY_COLS = ["Symbol", "Entry Price", "Shares"]
     for sheet in output:
-        assert all(col in sheet[1].columns for col in MANDATORY_COLS), f"Sheet '{sheet[0]}' missing mandatory column. " \
-                                                                       f"({MANDATORY_COLS})"
+        assert all(col in sheet[1].columns for col in MANDATORY_SHEET_COLUMNS), \
+            f"Sheet '{sheet[0]}' missing mandatory column. ({MANDATORY_SHEET_COLUMNS})"
     return output
 

@@ -152,3 +152,4 @@ cython_debug/
 #.idea/
 testing.*
 .idea
+.DS_Store
