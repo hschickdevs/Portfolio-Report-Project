@@ -31,7 +31,10 @@ ___
    FROM_EMAIL_PASSWORD=your_sender_email_password
    ```
 4. Modify the "INPUT_FILEPATH" and "RECIPIENT_EMAILS" variables in [main.py](main.py)
-5. Run the script with `python main.py` from the root directory
+5. Run the script from the root directory:
+   ```bash
+   python main.py
+   ```
 ___
 ### Email Report Demo:
 ![report_email_demo](img/demo.png)
