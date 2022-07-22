@@ -14,7 +14,7 @@ This report adds the following datapoints for each stock using the [Finnhub API]
 - **Highest Weighted Analyst Trend (buy, strong buy, hold, etc.)**
 - **Social Sentiment (Twitter Only -1 to 1, -1 being very negative and 1 being very positive)**
 
-Upon initial startup of the bot, it to loads up an excel workbook containing three columns, "Symbol", "Entry Price", and "Shares".
+Upon initial startup of the bot, it to loads up an excel workbook containing three columns, "Symbol", "Entry Price", and "Shares". Each sheet in the workbook should contain these three columns, and each sheet is treated as a unique theoretical portfolio.
 
 The task is run on a scheduler that fetches all NYSE trading day closing times a year out from the script run date.
 The thread sleeps until a trading close date is satisfied, when the report is built and sent.
