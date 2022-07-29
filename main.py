@@ -11,7 +11,7 @@ handle_env()
 
 # Create portfolio report instance:
 INPUT_FILEPATH = "data/portfolios_input.xlsx"
-RECIPIENT_EMAILS = ["hschick2000@gmail.com"]
+RECIPIENT_EMAILS = ["your_email@gmail.com"]
 reporter = PortfolioReport(INPUT_FILEPATH, finnhub_apikey=getenv("FINNHUB_APIKEY"),
                            recipient_emails=RECIPIENT_EMAILS)
 
